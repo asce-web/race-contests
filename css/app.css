@@ -1,0 +1,48 @@
+html {
+
+}
+
+body {
+
+}
+
+.page {
+  width: 100%;
+  margin: 0px auto;
+  max-width: 45rem;
+  background: #024A8D;
+  padding: 0 0.5rem;
+}
+
+.row {
+  
+}
+
+.header {
+  padding: 0;
+}
+
+.header .columns {
+  padding: 0.25em 0;
+}
+
+.main-content {
+  background: #FFFFFF;
+}
+
+.main-content #remindForm {
+  
+}
+
+.main-content .columns h1 {
+  color: #024A8D;
+}
+
+.footer {
+  background: #024A8D;
+  min-height: 40px;
+}
+
+.footer .logo-area {
+  padding: 1em 0;
+}
