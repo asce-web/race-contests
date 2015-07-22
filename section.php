@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" >
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ASCE Younger Member Renewal Form</title>
+  <title>ASCE Section Renewal Form</title>
 
   <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -15,17 +14,16 @@
   <link rel="stylesheet" href="css/app.css">
 
   <script src="js/vendor/modernizr.js"></script>
-
 </head>
 <body>
-  
-  <div class="page">
+
+  <main class="page">
     <!-- Header Section -->
-    <div class="row header">
+    <header class="row header">
       <div class="small-12 columns">
-        <img src="img/ym-email-header.jpg" class="right">
+        <img src="img/email-header-section-2016.jpg" class="right">
       </div>
-    </div>
+    </header>
     <!-- End Header Section -->
 
     <!-- Main Section -->
@@ -51,14 +49,14 @@
           // display form if user has not clicked submit
           if (!isset($_POST["submit"])) {
         ?>
-        
         <form id="remindForm" method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
           <div class="small-12 columns">
-            <p>Spread the word by reminding your ASCE friends how important it is to renew their ASCE membership. Encourage everyone in your Section to renew before December 12, 2014 to increase your Section's chances to win $1,000!</p>
+            <p>Spread the word by reminding your ASCE friends how important it is
+              to renew their ASCE membership. Encourage everyone in your Section
+              to renew before December 11, 2015 to increase your Section&rsquo;s chances
+              to win $1,000!</p>
           </div>
-
           <div class="row">
-
             <div class="small-12 medium-2 columns">&nbsp;</div>
 
             <div class="small-12 medium-7 columns">
@@ -108,12 +106,10 @@
               </div>
             </div>
 
-            <div class="small-12 medium-3 columns">
-              &nbsp;
-            </div>
+            <div class="small-12 medium-3 columns">&nbsp;</div>
           </div>
         </form>
-        <?php 
+        <?php
           } else {  // the user has submitted the form
             // Check if the "from" input field is filled out
             if (isset($_POST["from"])) {
@@ -148,15 +144,15 @@
     <!-- End Main Section -->
 
     <!-- Footer Section -->
-    <div class="row footer">
+    <footer class="row footer">
       <div class="small-12 columns">
         <div class="logo-area">
           <a href="http://www.asce.org/" target="_blank"><img src="img/ASCE_logo_sig_REV.png"></a>
         </div>
       </div>
-    </div>
+    </footer>
     <!-- End Footer Section -->
-  </div>
+  </main>
 
   <script src="js/vendor/jquery.js"></script>
   <script src="js/foundation.min.js"></script>
