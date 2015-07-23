@@ -1,0 +1,41 @@
+main {
+  width: 100%;
+  margin: 0px auto;
+  max-width: 45rem;
+  background: #024A8D;
+  padding: 0 0.5rem;
+}
+.s-younger_member main {
+  background: #001942;
+}
+.s-section main {
+  background: #000000;
+}
+footer {
+  min-height: 40px;
+}
+.s-younger_member footer {
+  background: #001942;
+}
+.s-section footer {
+  background: #000000;
+}
+.s-younger_member h1 {
+  color: #001942;
+}
+.s-section h1 {
+  color: #000000;
+}
+.o-LogoArea {
+  display: block;
+  padding: 1em 0;
+}
+.c-HeaderImg {
+  display: block;
+  width: 100%;
+  padding: 0.25em 0;
+}
+.c-Content {
+  background: #fff;
+  padding: 0 1rem;
+}

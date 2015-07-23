@@ -1,0 +1,54 @@
+
+@color_ym: #001942;
+@color_ss: #000;
+
+main {
+  width: 100%;
+  margin: 0px auto;
+  max-width: 45rem;
+  background: #024A8D;
+  padding: 0 0.5rem;
+  .s-younger_member & {
+    background: @color_ym;
+  }
+  .s-section & {
+    background: @color_ss;
+  }
+}
+footer {
+  min-height: 40px;
+  .s-younger_member & {
+    background: @color_ym;
+  }
+  .s-section & {
+    background: @color_ss;
+  }
+}
+h1 {
+  .s-younger_member & {
+    color: @color_ym;
+  }
+  .s-section & {
+    color: @color_ss;
+  }
+}
+
+
+
+.o-LogoArea {
+  display: block;
+  padding: 1em 0;
+}
+
+
+.c-HeaderImg {
+  display: block;
+  width: 100%;
+  padding: 0.25em 0;
+}
+
+
+.c-Content {
+  background: #fff;
+  padding: 0 1rem;
+}
