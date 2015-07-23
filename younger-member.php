@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ASCE Younger Member Renewal Form</title>
 
-  <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
-  <link rel="stylesheet" href="css/normalize.css">
+  <!-- If you are using CSS version, only link these 3 files, you may add app.css to use for your overrides if you like. -->
+  <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+  <link rel="stylesheet" href="bower_components/xmeter/xmeter.css">
   <link rel="stylesheet" href="css/foundation.css">
 
   <!-- If you are using the gem version, you need this only -->
