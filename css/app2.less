@@ -17,6 +17,7 @@ main {
     background: @color_ss;
   }
 }
+
 footer {
   min-height: 40px;
   .s-younger_member & {
@@ -26,7 +27,10 @@ footer {
     background: @color_ss;
   }
 }
+
 h1 {
+  padding-top: 0;
+  line-height: 1.25;
   .s-younger_member & {
     color: @color_ym;
   }
@@ -35,6 +39,9 @@ h1 {
   }
 }
 
+input[type] { // HACK override foundation
+  margin: 0 0 1.5rem 0;
+}
 .o-FlexContainer {
   #XMETER .flexbox();
   #XMETER .flex-direction(row);
@@ -55,14 +62,15 @@ h1 {
   width: @1o1;
   @media only screen and (min-width: 640px) {
     width: @1o3;
+    text-align: right;
   }
-  padding-right: 1rem;
+  padding: 0.5rem 1rem 0.5rem 0;
 }
 .o-FormField__Input {
   #XMETER .CONSTS();
   width: @1o1;
   @media only screen and (min-width: 640px) {
-    width: @2o3;
+    width: @2o3 !important; // HACK override foundation
   }
 }
 .o-FormField__Input--submit {
@@ -76,15 +84,14 @@ h1 {
 .o-LogoArea {
   display: block;
   padding: 1em 0;
+  a {display: inline-block;}
 }
-
 
 .c-HeaderImg {
   display: block;
   width: 100%;
   padding: 0.25em 0;
 }
-
 
 .c-Content {
   background: #fff;

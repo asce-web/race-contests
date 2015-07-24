@@ -48,33 +48,17 @@
           to win $1,000!</p>
 
         <div class="o-FlexContainer o-FormField">
-          <div class="o-FormField__Label">
-            <label for="first-name-label" class="right inline">Your First Name</label>
-          </div>
-          <div class="o-FormField__Input">
-            <input required id="first-name-label" type="text" name="first" placeholder="ex: John">
-          </div>
+          <label class="o-FormField__Label" for="first-name-label">Your First Name</label>
+          <input class="o-FormField__Input" required id="first-name-label" type="text" name="first" placeholder="ex: John">
 
-          <div class="o-FormField__Label">
-            <label for="last-name-label" class="right inline">Your Last Name</label>
-          </div>
-          <div class="o-FormField__Input">
-            <input required id="last-name-label" type="text" name="last" placeholder="ex: Smith">
-          </div>
+          <label class="o-FormField__Label" for="last-name-label">Your Last Name</label>
+          <input class="o-FormField__Input" required id="last-name-label" type="text" name="last" placeholder="ex: Smith">
 
-          <div class="o-FormField__Label">
-            <label for="email-label" class="right inline">Your E-mail Address</label>
-          </div>
-          <div class="o-FormField__Input">
-            <input id="email-label" type="text" name="from" placeholder="ex: jsmith@example.com">
-          </div>
+          <label class="o-FormField__Label" for="email-label">Your E-mail Address</label>
+          <input class="o-FormField__Input" id="email-label" type="text" name="from" placeholder="ex: jsmith@example.com">
 
-          <div class="o-FormField__Label">
-            <label for="recipient-email-label" class="right inline">Who are you asking to renew?</label>
-          </div>
-          <div class="o-FormField__Input">
-            <input id="recipient-email-label" type="text" name="to" placeholder="ex: yoursectionfriend@example.com">
-          </div>
+          <label class="o-FormField__Label" for="recipient-email-label">Who are you asking to renew?</label>
+          <input class="o-FormField__Input" id="recipient-email-label" type="text" name="to" placeholder="ex: yoursectionfriend@example.com">
 
           <div class="o-FormField__Input o-FormField__Input--submit">
             <input type="submit" name="submit" value="Submit" class="button small secondary">

@@ -20,11 +20,18 @@ footer {
 .s-section footer {
   background: #000000;
 }
+h1 {
+  padding-top: 0;
+  line-height: 1.25;
+}
 .s-younger_member h1 {
   color: #001942;
 }
 .s-section h1 {
   color: #000000;
+}
+input[type] {
+  margin: 0 0 1.5rem 0;
 }
 .o-FlexContainer {
   display: -webkit-box;
@@ -46,11 +53,12 @@ footer {
 }
 .o-FormField__Label {
   width: 100%;
-  padding-right: 1rem;
+  padding: 0.5rem 1rem 0.5rem 0;
 }
 @media only screen and (min-width: 640px) {
   .o-FormField__Label {
     width: 33.33333333%;
+    text-align: right;
   }
 }
 .o-FormField__Input {
@@ -58,7 +66,7 @@ footer {
 }
 @media only screen and (min-width: 640px) {
   .o-FormField__Input {
-    width: 66.66666667%;
+    width: 66.66666667% !important;
   }
 }
 .o-FormField__Input--submit {
@@ -72,6 +80,9 @@ footer {
 .o-LogoArea {
   display: block;
   padding: 1em 0;
+}
+.o-LogoArea a {
+  display: inline-block;
 }
 .c-HeaderImg {
   display: block;
