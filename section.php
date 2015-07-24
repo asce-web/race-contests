@@ -22,7 +22,7 @@
       <img class="c-HeaderImg" src="img/email-header-section-2016.jpg">
     </header>
 
-    <div class="c-Content small-12 columns">
+    <div class="c-Content">
       <?php
         function spamcheck($field) {
           // Sanitize e-mail address
@@ -42,63 +42,43 @@
         if (!isset($_POST["submit"])) {
       ?>
       <form id="remindForm" method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
-        <div class="small-12 columns">
-          <p>Spread the word by reminding your ASCE friends how important it is
-            to renew their ASCE membership. Encourage everyone in your Section
-            to renew before December 11, 2015 to increase your Section&rsquo;s chances
-            to win $1,000!</p>
-        </div>
-        <div class="row">
-          <div class="small-12 medium-2 columns">&nbsp;</div>
+        <p>Spread the word by reminding your ASCE friends how important it is
+          to renew their ASCE membership. Encourage everyone in your Section
+          to renew before December 11, 2015 to increase your Section&rsquo;s chances
+          to win $1,000!</p>
 
-          <div class="small-12 medium-7 columns">
-            <div class="row">
-              <div class="small-4 columns">
-                <label for="first-name-label" class="right inline">Your First Name</label>
-              </div>
-              <div class="small-8 columns">
-                <input required id="first-name-label" type="text" name="first" placeholder="ex: John">
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="small-4 columns">
-                <label for="last-name-label" class="right inline">Your Last Name</label>
-              </div>
-              <div class="small-8 columns">
-                <input required id="last-name-label" type="text" name="last" placeholder="ex: Smith">
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="small-4 columns">
-                <label for="email-label" class="right inline">Your E-mail Address</label>
-              </div>
-              <div class="small-8 columns">
-                <input id="email-label" type="text" name="from" placeholder="ex: jsmith@example.com">
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="small-4 columns">
-                <label for="recipient-email-label" class="right inline">Who are you asking to renew?</label>
-              </div>
-              <div class="small-8 columns">
-                <input id="recipient-email-label" type="text" name="to" placeholder="ex: yoursectionfriend@example.com">
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="small-4 columns">
-                &nbsp;
-              </div>
-              <div class="small-8 columns">
-                <input type="submit" name="submit" value="Submit" class="button small secondary">
-              </div>
-            </div>
+        <div class="o-FlexContainer o-FormField">
+          <div class="o-FormField__Label">
+            <label for="first-name-label" class="right inline">Your First Name</label>
+          </div>
+          <div class="o-FormField__Input">
+            <input required id="first-name-label" type="text" name="first" placeholder="ex: John">
           </div>
 
-          <div class="small-12 medium-3 columns">&nbsp;</div>
+          <div class="o-FormField__Label">
+            <label for="last-name-label" class="right inline">Your Last Name</label>
+          </div>
+          <div class="o-FormField__Input">
+            <input required id="last-name-label" type="text" name="last" placeholder="ex: Smith">
+          </div>
+
+          <div class="o-FormField__Label">
+            <label for="email-label" class="right inline">Your E-mail Address</label>
+          </div>
+          <div class="o-FormField__Input">
+            <input id="email-label" type="text" name="from" placeholder="ex: jsmith@example.com">
+          </div>
+
+          <div class="o-FormField__Label">
+            <label for="recipient-email-label" class="right inline">Who are you asking to renew?</label>
+          </div>
+          <div class="o-FormField__Input">
+            <input id="recipient-email-label" type="text" name="to" placeholder="ex: yoursectionfriend@example.com">
+          </div>
+
+          <div class="o-FormField__Input o-FormField__Input--submit">
+            <input type="submit" name="submit" value="Submit" class="button small secondary">
+          </div>
         </div>
       </form>
       <?php

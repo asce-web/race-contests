@@ -1,3 +1,5 @@
+@import (reference) url('../node_modules/xmeter/src/__settings.less');
+@import (reference) url('../node_modules/xmeter/src/_tool.fallback.flexbox.less');
 
 @color_ym: #001942;
 @color_ss: #000;
@@ -5,7 +7,7 @@
 main {
   width: 100%;
   margin: 0px auto;
-  max-width: 45rem;
+  max-width: 720px;
   background: #024A8D;
   padding: 0 0.5rem;
   .s-younger_member & {
@@ -33,7 +35,43 @@ h1 {
   }
 }
 
+.o-FlexContainer {
+  #XMETER .flexbox();
+  #XMETER .flex-direction(row);
+  #XMETER .flex-wrap(wrap);
+  #XMETER .justify-content(space-between);
+}
 
+.o-FormField {
+  #XMETER .CONSTS();
+  @media only screen and (min-width: 480px) {
+    width: @7o12;
+    margin-left: @2o12;
+    margin-right: @3o12;
+  }
+}
+.o-FormField__Label {
+  #XMETER .CONSTS();
+  width: @1o1;
+  @media only screen and (min-width: 640px) {
+    width: @1o3;
+  }
+  padding-right: 1rem;
+}
+.o-FormField__Input {
+  #XMETER .CONSTS();
+  width: @1o1;
+  @media only screen and (min-width: 640px) {
+    width: @2o3;
+  }
+}
+.o-FormField__Input--submit {
+  #XMETER .CONSTS();
+  position: relative;
+  @media only screen and (min-width: 640px) {
+    left: @1o3; // width of `.o-FormField__Label`
+  }
+}
 
 .o-LogoArea {
   display: block;
