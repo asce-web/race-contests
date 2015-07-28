@@ -47,23 +47,40 @@
           to renew before December 11, 2015 to increase your team&rsquo;s chances
           to win $1,000!</p>
 
-        <div class="o-FlexContainer o-FormField">
-          <label class="o-FormField__Label" for="first-name-label">Your First Name</label>
-          <input class="o-FormField__Input" required id="first-name-label" type="text" name="first" placeholder="ex: John">
+        <dl class="o-FlexContainer o-FormField">
+          <dt class="o-FormField__Label">
+            <label for="first-name-label">Your First Name</label>
+          </dt>
+          <dd class="o-FormField__Input">
+            <input required id="first-name-label" type="text" name="first" placeholder="ex: John">
+          </dd>
 
-          <label class="o-FormField__Label" for="last-name-label">Your Last Name</label>
-          <input class="o-FormField__Input" required id="last-name-label" type="text" name="last" placeholder="ex: Smith">
+          <dt class="o-FormField__Label">
+            <label for="last-name-label">Your Last Name</label>
+          </dt>
+          <dd class="o-FormField__Input">
+            <input required id="last-name-label" type="text" name="last" placeholder="ex: Smith">
+          </dd>
 
-          <label class="o-FormField__Label" for="email-label">Your E-mail Address</label>
-          <input class="o-FormField__Input" id="email-label" type="text" name="from" placeholder="ex: jsmith@example.com">
+          <dt class="o-FormField__Label">
+            <label for="email-label">Your E-mail Address</label>
+          </dt>
+          <dd class="o-FormField__Input">
+            <input id="email-label" type="text" name="from" placeholder="ex: jsmith@example.com">
+          </dd>
 
-          <label class="o-FormField__Label" for="recipient-email-label">Who are you asking to renew?</label>
-          <input class="o-FormField__Input" id="recipient-email-label" type="text" name="to" placeholder="ex: yoursectionfriend@example.com">
+          <dt class="o-FormField__Label">
+            <label for="recipient-email-label">Who are you asking to renew?</label>
+          </dt>
+          <dd class="o-FormField__Input">
+            <input id="recipient-email-label" type="text" name="to" placeholder="ex: yoursectionfriend@example.com">
+          </dd>
 
-          <div class="o-FormField__Input o-FormField__Input--submit">
+          <dt class="o-FormField__Label"></dt>
+          <dd class="o-FormField__Input">
             <input type="submit" name="submit" value="Submit" class="button small secondary">
-          </div>
-        </div>
+          </dd>
+        </dl>
       </form>
       <?php
         } else {  // the user has submitted the form
