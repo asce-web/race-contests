@@ -35,7 +35,7 @@
           }
         }
       ?>
-      <h1>Remind an ASCE Younger Member Friend to Renew</h1>
+      <h1>Remind an ASCE Section Friend to Renew</h1>
 
       <?php
         // display form if user has not clicked submit
