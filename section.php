@@ -52,33 +52,33 @@
             <label for="first-name-label">Your First Name</label>
           </dt>
           <dd class="o-FormField__Input">
-            <input id="first-name-label" type="text" name="first" required="" placeholder="ex: John">
+            <input id="first-name-label" required="" type="text" name="first" placeholder="ex: John">
           </dd>
 
           <dt class="o-FormField__Label">
             <label for="last-name-label">Your Last Name</label>
           </dt>
           <dd class="o-FormField__Input">
-            <input id="last-name-label" type="text" name="last" required="" placeholder="ex: Smith">
+            <input id="last-name-label" required="" type="text" name="last" placeholder="ex: Smith">
           </dd>
 
           <dt class="o-FormField__Label">
             <label for="email-label">Your E-mail Address</label>
           </dt>
           <dd class="o-FormField__Input">
-            <input id="email-label" type="email" name="from" required="" placeholder="ex: jsmith@example.com">
+            <input id="email-label" required="" type="email" name="from" placeholder="ex: jsmith@example.com">
           </dd>
 
           <dt class="o-FormField__Label">
             <label for="recipient-email-label">Who are you asking to renew?</label>
           </dt>
           <dd class="o-FormField__Input">
-            <input id="recipient-email-label" type="email" name="to" required="" placeholder="ex: yoursectionfriend@example.com">
+            <input id="recipient-email-label" required="" type="email" name="to" placeholder="ex: yoursectionfriend@example.com">
           </dd>
 
           <dt class="o-FormField__Label"></dt>
           <dd class="o-FormField__Input">
-            <input type="submit" name="submit" class="button small secondary">
+            <input class="button small secondary" type="submit" name="submit">
           </dd>
         </dl>
       </form>
