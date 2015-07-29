@@ -39,9 +39,9 @@
 
       <?php
         // display form if user has not clicked submit
-        if (!isset($_POST["submit"])) {
+        if (!isset($_POST['submit'])) {
       ?>
-      <form id="remindForm" method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
+      <form id="remindForm" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
         <p>Spread the word by reminding your ASCE friends how important it is
           to renew their ASCE membership. Encourage everyone on your Younger Member team
           to renew before December 11, 2015 to increase your team&rsquo;s chances
@@ -68,26 +68,26 @@
       <?php
         } else {  // the user has submitted the form
           // Check if the "from" input field is filled out
-          if (isset($_POST["from"])) {
+          if (isset($_POST['from'])) {
             // Check if "from" email address is valid
-            $mailcheck = spamcheck($_POST["from"]);
+            $mailcheck = spamcheck($_POST['from']);
             if ($mailcheck==FALSE) {
-              echo "Invalid input";
+              echo 'Invalid input';
             } else {
-              $fName = strip_tags($_POST["first"]);
-              $lName = strip_tags($_POST["last"]);
+              $fName = strip_tags($_POST['first']);
+              $lName = strip_tags($_POST['last']);
               $from = strip_tags($_POST['from']); // sender
-              $to = strip_tags($_POST["to"]); // reicipient
-              $subject = "Remember to renew your ASCE membership";
+              $to = strip_tags($_POST['to']); // reicipient
+              $subject = 'Remember to renew your ASCE membership';
               $message = '<html><body>';
               $message .= '<p>Hi,</p><p>'.$fName.' '.$lName.' reminded you to renew your ASCE membership.<br>The Section with the highest percentage of renewed members by December 12, 2014 will win a cash prize of $1,000!</p> <p>Go to <a href="http://www.asce.org/ymfinishline/">www.asce.org/finishline</a> today.</p>';
               $message .= '</body></html>';
               // message lines should not exceed 70 characters (PHP rule), so wrap it
               $message = wordwrap($message, 70);
-              $headers = "From: " . $from . "\r\n";
-              $headers .= "Reply-To: ". $from . "\r\n";
-              $headers .= "MIME-Version: 1.0\r\n";
-              $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+              $headers = 'From: ' . $from . "\r\n"; // need double-quotes for character escapes
+              $headers .= 'Reply-To: '. $from . '\r\n';
+              $headers .= 'MIME-Version: 1.0' . "\r\n";
+              $headers .= 'Content-Type: text/html; charset=ISO-8859-1' . "\r\n";
               // send mail
               mail($to,$subject,$message,$headers);
               echo '<p>Thank you for spreading the word and putting your Section one step closer to winning the $1,000 cash prize!</p> <p><a href="http://www.asce.org/ymfinishline/">See your Section&#39;s standing in the race</a>.</p>';
@@ -109,7 +109,7 @@
   <script src="js/vendor/jquery.validate.min.js"></script>
   <script>
     $(document).foundation();
-    $("#remindForm").validate({
+    $('#remindForm').validate({
       rules: {
         from: {
           required: true,
