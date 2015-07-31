@@ -1,7 +1,6 @@
 
 @import (reference) url('../node_modules/xmeter/src/__settings.less');
 @import (reference) url('../node_modules/xmeter/src/_tool.fallback.flexbox.less');
-// @import (reference) url('../node_modules/xmeter/src/_tool.module.fontsize.less');
 
 dd + dt {
   margin-top: 0; // override xmeter
@@ -52,6 +51,10 @@ h1 {
   .s-section & {
     color: @color_ss;
   }
+}
+
+input[type] {
+  margin-bottom: 0; // undo foundation
 }
 
 .o-FlexContainer {
