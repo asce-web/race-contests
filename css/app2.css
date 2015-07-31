@@ -1,3 +1,13 @@
+dd + dt {
+  margin-top: 0;
+}
+input {
+  padding: 0;
+  border-width: 1px;
+  margin-top: -2px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.25);
+}
 main {
   width: 100%;
   margin: 0px auto;
@@ -30,9 +40,6 @@ h1 {
 .s-section h1 {
   color: #000000;
 }
-input[type] {
-  margin: 0 0 1.5rem 0;
-}
 .o-FlexContainer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -53,28 +60,23 @@ input[type] {
 }
 .o-FormField__Label {
   width: 100%;
-  padding: 0.5rem 1rem 0.5rem 0;
+  font-weight: inherit;
 }
 @media only screen and (min-width: 640px) {
   .o-FormField__Label {
     width: 33.33333333%;
     text-align: right;
+    padding-right: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 .o-FormField__Input {
   width: 100%;
+  margin-bottom: 1.5rem;
 }
 @media only screen and (min-width: 640px) {
   .o-FormField__Input {
     width: 66.66666667% !important;
-  }
-}
-.o-FormField__Input--submit {
-  position: relative;
-}
-@media only screen and (min-width: 640px) {
-  .o-FormField__Input--submit {
-    left: 33.33333333%;
   }
 }
 .o-LogoArea {

@@ -35,59 +35,76 @@
           }
         }
       ?>
-      <h1>Remind an ASCE Younger Member Friend to Renew</h1>
+      <h1>Remind an ASCE Section Friend to Renew</h1>
 
       <?php
         // display form if user has not clicked submit
         if (!isset($_POST["submit"])) {
       ?>
-      <form id="remindForm" method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
+      <form id="remindForm" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
         <p>Spread the word by reminding your ASCE friends how important it is
           to renew their ASCE membership. Encourage everyone in your Section
           to renew before December 11, 2015 to increase your Section&rsquo;s chances
           to win $1,000!</p>
 
-        <div class="o-FlexContainer o-FormField">
-          <label class="o-FormField__Label" for="first-name-label">Your First Name</label>
-          <input class="o-FormField__Input" required id="first-name-label" type="text" name="first" placeholder="ex: John">
+        <dl class="o-FlexContainer o-FormField">
+          <dt class="o-FormField__Label">
+            <label for="first-name-label">Your First Name</label>
+          </dt>
+          <dd class="o-FormField__Input">
+            <input id="first-name-label" required="" type="text" name="first" placeholder="ex: John">
+          </dd>
 
-          <label class="o-FormField__Label" for="last-name-label">Your Last Name</label>
-          <input class="o-FormField__Input" required id="last-name-label" type="text" name="last" placeholder="ex: Smith">
+          <dt class="o-FormField__Label">
+            <label for="last-name-label">Your Last Name</label>
+          </dt>
+          <dd class="o-FormField__Input">
+            <input id="last-name-label" required="" type="text" name="last" placeholder="ex: Smith">
+          </dd>
 
-          <label class="o-FormField__Label" for="email-label">Your E-mail Address</label>
-          <input class="o-FormField__Input" id="email-label" type="text" name="from" placeholder="ex: jsmith@example.com">
+          <dt class="o-FormField__Label">
+            <label for="email-label">Your E-mail Address</label>
+          </dt>
+          <dd class="o-FormField__Input">
+            <input id="email-label" required="" type="email" name="from" placeholder="ex: jsmith@example.com">
+          </dd>
 
-          <label class="o-FormField__Label" for="recipient-email-label">Who are you asking to renew?</label>
-          <input class="o-FormField__Input" id="recipient-email-label" type="text" name="to" placeholder="ex: yoursectionfriend@example.com">
+          <dt class="o-FormField__Label">
+            <label for="recipient-email-label">Who are you asking to renew?</label>
+          </dt>
+          <dd class="o-FormField__Input">
+            <input id="recipient-email-label" required="" type="email" name="to" placeholder="ex: yoursectionfriend@example.com">
+          </dd>
 
-          <div class="o-FormField__Input o-FormField__Input--submit">
-            <input type="submit" name="submit" value="Submit" class="button small secondary">
-          </div>
-        </div>
+          <dt class="o-FormField__Label"></dt>
+          <dd class="o-FormField__Input">
+            <input class="button small secondary" type="submit" name="submit">
+          </dd>
+        </dl>
       </form>
       <?php
         } else {  // the user has submitted the form
           // Check if the "from" input field is filled out
-          if (isset($_POST["from"])) {
+          if (isset($_POST['from'])) {
             // Check if "from" email address is valid
-            $mailcheck = spamcheck($_POST["from"]);
+            $mailcheck = spamcheck($_POST['from']);
             if ($mailcheck==FALSE) {
-              echo "Invalid input";
+              echo 'Invalid input';
             } else {
-              $fName = strip_tags($_POST["first"]);
-              $lName = strip_tags($_POST["last"]);
+              $fName = strip_tags($_POST['first']);
+              $lName = strip_tags($_POST['last']);
               $from = strip_tags($_POST['from']); // sender
-              $to = strip_tags($_POST["to"]); // reicipient
-              $subject = "Remember to renew your ASCE membership";
+              $to = strip_tags($_POST['to']); // reicipient
+              $subject = 'Remember to renew your ASCE membership';
               $message = '<html><body>';
               $message .= '<p>Hi,</p><p>'.$fName.' '.$lName.' reminded you to renew your ASCE membership.<br>The Section with the highest percentage of renewed members by December 12, 2014 will win a cash prize of $1,000!</p> <p>Go to <a href="http://www.asce.org/ymfinishline/">www.asce.org/finishline</a> today.</p>';
               $message .= '</body></html>';
               // message lines should not exceed 70 characters (PHP rule), so wrap it
               $message = wordwrap($message, 70);
-              $headers = "From: " . $from . "\r\n";
-              $headers .= "Reply-To: ". $from . "\r\n";
-              $headers .= "MIME-Version: 1.0\r\n";
-              $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+              $headers = 'From: ' . $from . "\r\n"; // need double-quotes for character escapes
+              $headers .= 'Reply-To: '. $from . "\r\n";
+              $headers .= 'MIME-Version: 1.0' . "\r\n";
+              $headers .= 'Content-Type: text/html; charset=ISO-8859-1' . "\r\n";
               // send mail
               mail($to,$subject,$message,$headers);
               echo '<p>Thank you for spreading the word and putting your Section one step closer to winning the $1,000 cash prize!</p> <p><a href="http://www.asce.org/ymfinishline/">See your Section&#39;s standing in the race</a>.</p>';
@@ -109,7 +126,7 @@
   <script src="js/vendor/jquery.validate.min.js"></script>
   <script>
     $(document).foundation();
-    $("#remindForm").validate({
+    $('#remindForm').validate({
       rules: {
         from: {
           required: true,
