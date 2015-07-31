@@ -40,6 +40,9 @@ h1 {
 .s-section h1 {
   color: #000000;
 }
+input[type] {
+  margin-bottom: 0;
+}
 .o-FlexContainer {
   display: -webkit-box;
   display: -webkit-flex;
