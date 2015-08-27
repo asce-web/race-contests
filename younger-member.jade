@@ -87,7 +87,7 @@ html.no-js(lang="en")
         |         $to = strip_tags($_POST['to']); // reicipient
         |         $subject = 'Remember to renew your ASCE membership';
         |         $message = '<html><body>';
-        |         $message .= '<p>Hi,</p><p>'.$fName.' '.$lName.' reminded you to renew your ASCE membership.<br>The Section with the highest percentage of renewed members by December 12, 2014 will win a cash prize of $1,000!</p> <p>Go to <a href="http://www.asce.org/ymfinishline/">www.asce.org/finishline</a> today.</p>';
+        |         $message .= '<p>Hi,</p><p>'.$fName.' '.$lName.' reminded you to renew your ASCE membership.<br>The Section with the highest percentage of renewed members by December 11, 2015 will win a cash prize of $1,000!</p> <p>Go to <a href="http://www.asce.org/finishline/">www.asce.org/finishline</a> today.</p>';
         |         $message .= '</body></html>';
         |         // message lines should not exceed 70 characters (PHP rule), so wrap it
         |         $message = wordwrap($message, 70);
@@ -97,7 +97,7 @@ html.no-js(lang="en")
         |         $headers .= 'Content-Type: text/html; charset=ISO-8859-1' . "\r\n";
         |         // send mail
         |         mail($to,$subject,$message,$headers);
-        |         echo '<p>Thank you for spreading the word and putting your Section one step closer to winning the $1,000 cash prize!</p> <p><a href="http://www.asce.org/ymfinishline/">See your Section&#39;s standing in the race</a>.</p>';
+        |         echo '<p>Thank you for spreading the word and putting your Section one step closer to winning the $1,000 cash prize!</p> <p><a href="http://www.asce.org/ymfinishline/">See your Section&rsquo;s standing in the race</a>.</p>';
         |       }
         |     }
         |   }
